@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root,
+html,
+body,
+#root {
+   @apply min-h-[100dvh];
+}
+
+#root {
+   @apply bg-bg text-text;
+}
