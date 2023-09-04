@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import List from './list';
 import Search from './search';
 
 export default function Main() {
@@ -10,5 +11,6 @@ export default function Main() {
          q={query}
          setQ={setQuery}
       />
+      <List q={query} />
    </main>;
 }
