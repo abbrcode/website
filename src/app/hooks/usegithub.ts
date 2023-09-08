@@ -1,11 +1,9 @@
 import { useEffect, useState } from 'react';
 
-import { Abbr } from '../../types/abbr';
-
 const endpoint = 'https://raw.githubusercontent.com/abbrcode/';
 
-export default function useGitHub(path: string) {
-   const [res, setRes] = useState<Abbr[]>([]);
+export default function useGitHub<T>(path: string) {
+   const [res, setRes] = useState<T | null>(null);
 
    useEffect(() => {
       (async () => {

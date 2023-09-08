@@ -7,7 +7,9 @@ export default function List({
 }: {
    q: string;
 }) {
-   const abbrs = useGitHub('db/main/abbrs/.json');
+   const abbrs = useGitHub<Abbr[]>('db/main/abbrs/.json');
+
+   if (abbrs === null) return;
 
    const filter: Abbr[] = abbrs.filter(a => a.word.includes(q));
 
@@ -30,9 +32,11 @@ function Abbrs({
 }: {
    filter: Abbr[];
 }) {
-   const degrees = useGitHub('db/main/list/degrees.json');
+   const degrees = useGitHub<{
+      [key: string]: string;
+   }>('db/main/list/degrees.json');
 
-   return <div>
+   return degrees && <div>
       {filter.map(abbr => {
          return <div key={abbr.word}>
             {abbr.word}
