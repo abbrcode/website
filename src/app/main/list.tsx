@@ -1,6 +1,6 @@
-import { Abbr } from '../types/abbr';
+import { Abbr } from '../../types/abbr';
 
-import { abbrs, degrees } from '../data/data';
+import { abbrs, degrees } from '../../data/data';
 
 export default function List({
    q
