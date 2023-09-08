@@ -11,7 +11,7 @@ export default function Search({
 
    return <input
       type='search'
-      className='rounded py-2 w-52 text-center font-mono'
+      className='rounded py-2 w-60 text-center font-mono'
       onChange={change}
       placeholder='Search an abbr...'
       value={q}
