@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root,
-html,
-body,
-#root {
-   @apply min-h-[100dvh];
-}
-
-#root {
+:root {
    @apply bg-bg text-text;
 }
