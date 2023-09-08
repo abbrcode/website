@@ -1,12 +1,14 @@
 import { Abbr } from '../../types/abbr';
 
-import { abbrs, degrees } from '../../data/data';
+import useGitHub from '../hooks/usegithub';
 
 export default function List({
    q
 }: {
    q: string;
 }) {
+   const abbrs = useGitHub('db/main/abbrs/.json');
+
    const filter: Abbr[] = abbrs.filter(a => a.word.includes(q));
 
    return <div>
@@ -28,6 +30,8 @@ function Abbrs({
 }: {
    filter: Abbr[];
 }) {
+   const degrees = useGitHub('db/main/list/degrees.json');
+
    return <div>
       {filter.map(abbr => {
          return <div key={abbr.word}>
