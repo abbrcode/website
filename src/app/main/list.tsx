@@ -1,6 +1,6 @@
 import { Abbr } from '../../types/abbr';
 
-import useGitHub from '../hooks/usegithub';
+import useGitHub from '../../hooks/usegithub';
 
 export default function List({
    q
