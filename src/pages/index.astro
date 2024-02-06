@@ -1,6 +1,20 @@
 ---
 import "../styles/global.css";
 
+import type { Abbr } from "../types/abbr";
+
+import Main from "../islands/main.svelte";
+
+const abbrs: Abbr[] = await (
+   await fetch(
+      "https://raw.githubusercontent.com/abbrcode/abbreviations-in-code/main/data/abbrs/.json",
+   )
+).json();
+const degrees = await (
+   await fetch(
+      "https://raw.githubusercontent.com/abbrcode/abbreviations-in-code/main/data/degrees.json",
+   )
+).json();
 ---
 
 <html lang="en">
@@ -33,5 +47,7 @@ import "../styles/global.css";
          •
          <a href="https://github.com/t1xx1/abbrext" class="link">AbbrExt</a>
       </nav>
+
+      <Main client:load {abbrs} {degrees} />
    </body>
 </html>
