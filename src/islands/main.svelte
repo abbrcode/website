@@ -18,7 +18,9 @@
       class="rounded-md outline-none px-3 py-2 w-80 text-accent font-mono"
       bind:value={query}
    />
-   <div class="pt-3 text-center">{filteredAbbrs.length} abbrs</div>
+   <div class="pt-3 text-center">
+      {filteredAbbrs.length} abbr{filteredAbbrs.length !== 1 ? 's' : ''}
+   </div>
 </div>
 
 <main class="flex flex-col items-center">
