@@ -24,13 +24,15 @@
 <main class="flex flex-col items-center">
    {#each filteredAbbrs as abbrEntry}
       <div>
-         <span>{abbrEntry.word}</span>
+         {abbrEntry.word}
          {#each abbrEntry.abbrs as abbr}
-            <span>
-               • {degrees[abbr.degree]}
-               {abbr.abbr}
-               {abbr.degree === 'yellow' && `{${abbr.context}}`}
-            </span>
+            {' • '}
+            <!-- Degree -->
+            {degrees[abbr.degree]}
+            <!-- Abbr -->
+            {abbr.abbr}
+            <!-- Context -->
+            {abbr.degree === 'yellow' ? `{${abbr.context}}` : ''}
          {/each}
       </div>
    {/each}
