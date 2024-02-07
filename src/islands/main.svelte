@@ -14,7 +14,7 @@
 <div>
    <input
       type="text"
-      placeholder="Search an abbr..."
+      placeholder="Search a word..."
       class="rounded-md outline-none px-3 py-2 w-80 text-accent font-mono"
       bind:value={query}
    />
