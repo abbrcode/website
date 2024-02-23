@@ -13,7 +13,7 @@
 
 <div>
    <input
-      type="text"
+      type="search"
       placeholder="Search a word..."
       class="rounded-md outline-none px-3 py-2 w-screen sm:w-80 text-accent text-center font-mono"
       bind:value={query}
