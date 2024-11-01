@@ -32,11 +32,11 @@
          {#each abbrEntry.abbrs as abbr}
             {' • '}
             <!-- Degree -->
-            {degrees.get(abbr.degree)} 
+            {degrees.get(abbr.degree)}
             <!-- Abbr -->
             {abbr.abbr}
             <!-- Context -->
-            {abbr.degree === 'yellow' ? `{${abbr.context}}` : ''}
+            {abbr.degree === 'context sensitive' ? `{${abbr.context}}` : ''}
          {/each}
       </div>
    {/each}
