@@ -22,4 +22,18 @@ export const degrees = new Map<string, string>(await (
    )
 ).json());
 
-console.log(degrees);
+export const langs: string[] = await (
+   await fetch(
+      'https://raw.githubusercontent.com/abbrcode/abbreviations-in-code/dev/data/i18n/langs.json',
+   )
+).json();
+
+export const getTranslations = async (lang: string) => {
+   if (lang === 'en') return;
+
+   return await (
+      await fetch(
+         `https://raw.githubusercontent.com/abbrcode/abbreviations-in-code/dev/data/i18n/${lang}/translations.json`,
+      )
+   ).json();
+};
