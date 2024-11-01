@@ -24,24 +24,27 @@ const degrees = await (
       Abbreviations in code
    </h1>
 
-   <nav class="text-md sm:text-xl flex flex-wrap gap-1 justify-center">
-      <a href="https://abbrcode.github.io/website" class="link">Old site</a>
-      •
-      <a href="https://github.com/abbrcode" class="link">Org</a>
+   <nav class="flex flex-wrap gap-1 items-center text-accent font-semibold">
+      <a href="https://github.com/abbrcode" class="hover:underline">
+         Org
+      </a>
       •
       <a
          href="https://github.com/abbrcode/abbreviations-in-code"
-         class="link flex gap-1 items-center"
+         class="hover:underline flex gap-1 items-center"
       >
          <div>Repo</div>
          <img
-            src="https://img.shields.io/github/stars/abbrcode/abbreviations-in-code?style=for-the-badge&labelColor=8080ff&color=8080ff"
-            alt="Repo stars"
+            src="https://img.shields.io/github/stars/abbrcode/abbreviations-in-code?style=for-the-badge&labelColor=00f&color=00f"
+            alt="Repo"
             class="rounded"
          />
       </a>
       •
-      <a href="https://github.com/t1xx1/abbrext" class="link">AbbrExt</a>
+      <a
+         href="https://github.com/t1xx1/abbrext"
+         class="hover:underline">AbbrExt</a
+      >
    </nav>
 
    <Main client:load {abbrs} {degrees} />
