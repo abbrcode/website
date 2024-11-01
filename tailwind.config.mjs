@@ -4,18 +4,11 @@ export default {
    theme: {
       extend: {
          colors: {
-            antiflashWhite: '#f0f0f0',
-            blue: '#0000ff',
-            night: '#0f0f0f',
-            periwinkle: '#c0c0ff',
-            tropicalIndigo: '#8080ff',
+            dark: '#0f0f0f',      // night
+            light: '#f0f0f0',     // antiflash white
 
-            bg: '#f0f0f0', // anti-flash white
-            text: '#0f0f0f', // night
-
-            primary: '#8080ff', // tropical indigo
-            secondary: '#c0c0ff', // periwinkle
-            accent: '#0000ff' //blue
+            primary: '#c2c2ff',   // periwinkle
+            accent: '#0000ff'     // blue
          }
       },
    },
