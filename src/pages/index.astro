@@ -1,25 +1,12 @@
 ---
 import Base from "~/layouts/base.astro";
 
-import type { Abbr } from "../types/abbr";
-
-import Main from "../islands/main.svelte";
-
-const abbrs: Abbr[] = await (
-   await fetch(
-      "https://raw.githubusercontent.com/abbrcode/abbreviations-in-code/main/data/abbrs/.json",
-   )
-).json();
-const degrees = await (
-   await fetch(
-      "https://raw.githubusercontent.com/abbrcode/abbreviations-in-code/main/data/degrees.json",
-   )
-).json();
+import Main from "~/components/main.astro";
 ---
 
 <Base>
    <h1
-      class="text-3xl sm:text-6xl md:text-7xl text-center text-accent font-semibold"
+      class="text-3xl sm:text-6xl md:text-7xl text-center text-accent font-bold"
    >
       Abbreviations in code
    </h1>
@@ -47,5 +34,5 @@ const degrees = await (
       >
    </nav>
 
-   <Main client:load {abbrs} {degrees} />
+   <Main />
 </Base>
