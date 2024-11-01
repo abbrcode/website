@@ -12,19 +12,19 @@ export type Abbr = {
 
 export const abbrs: Abbr[] = await (
    await fetch(
-      'https://raw.githubusercontent.com/abbrcode/abbreviations-in-code/dev/data/abbrs/.json',
+      'https://raw.githubusercontent.com/abbrcode/abbreviations-in-code/main/data/abbrs/.json',
    )
 ).json();
 
 export const degrees = new Map<string, string>(await (
    await fetch(
-      'https://raw.githubusercontent.com/abbrcode/abbreviations-in-code/dev/data/degrees.json',
+      'https://raw.githubusercontent.com/abbrcode/abbreviations-in-code/main/data/degrees.json',
    )
 ).json());
 
 export const langs: string[] = await (
    await fetch(
-      'https://raw.githubusercontent.com/abbrcode/abbreviations-in-code/dev/data/i18n/langs.json',
+      'https://raw.githubusercontent.com/abbrcode/abbreviations-in-code/main/data/i18n/langs.json',
    )
 ).json();
 
@@ -33,7 +33,7 @@ export const getTranslations = async (lang: string) => {
 
    return await (
       await fetch(
-         `https://raw.githubusercontent.com/abbrcode/abbreviations-in-code/dev/data/i18n/${lang}/translations.json`,
+         `https://raw.githubusercontent.com/abbrcode/abbreviations-in-code/main/data/i18n/${lang}/translations.json`,
       )
    ).json();
 };
