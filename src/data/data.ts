@@ -18,7 +18,7 @@ export const abbrs: Abbr[] = await (
 
 export const degrees = new Map<string, string>(await (
    await fetch(
-      'https://raw.githubusercontent.com/abbrcode/abbreviations-in-code/main/data/degrees.json',
+      'https://raw.githubusercontent.com/abbrcode/abbreviations-in-code/main/data/degrees/index.json',
    )
 ).json());
 
