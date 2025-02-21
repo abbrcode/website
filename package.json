@@ -3,9 +3,8 @@
    "type": "module",
    "scripts": {
       "dev": "astro dev",
-      "build": "run check && run preview",
-      "check": "astro check",
-      "preview": "vercel"
+      "build": "astro build",
+      "preview": "astro check && vercel"
    },
    "devDependencies": {
       "@astrojs/check": "^0.9.4",
