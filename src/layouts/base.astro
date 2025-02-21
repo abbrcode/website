@@ -11,9 +11,19 @@ import "~/index.css";
       <meta name="generator" content={Astro.generator} />
 
       <title>Abbreviations in code</title>
+
+      <!-- font -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+         rel="stylesheet"
+      />
    </head>
 
-   <body class="bg-primary px-5 py-12 flex flex-col gap-5 items-center text-dark">
+   <body
+      class="bg-primary px-5 py-12 flex flex-col gap-5 items-center text-dark font-poppins"
+   >
       <slot />
    </body>
 </html>
